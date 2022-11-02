@@ -80,6 +80,7 @@ export const Dashboard = () => {
       <nav className={toolbar}>
         <h1>Economic Dashboard</h1>
         <ul className={tools}>
+          
           {['From', 'To'].map((name) => {
             const limit =
               name === 'To'
@@ -105,6 +106,7 @@ export const Dashboard = () => {
               </li>
             )
           })}
+
           <li className={`${tool} ${scale}`}>
             <label>Scale</label>
             <span className={scaleContainer}>
@@ -126,6 +128,7 @@ export const Dashboard = () => {
       </nav>
       <div className={chartsContainer}>
         <div className={charts}>
+
           {chartElements.map(({ code, label, Component }) => {
             const chartProps = { code, label, range, scale }
 
@@ -135,11 +138,13 @@ export const Dashboard = () => {
               </div>
             )
           })}
+
           <div className={`${chart} ${wBorder}`}>
             {numberElements.map((el) => {
               return <NumberStat key={el.code} {...el} range={range} />
             })}
           </div>
+
         </div>
       </div>
     </div>

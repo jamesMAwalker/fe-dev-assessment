@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Bar } from 'react-chartjs-2'
 import ChartJS from 'chart.js/auto'
+import { CategoryScale } from 'chart.js'
+
+ChartJS.register(CategoryScale)
 
 import { getNewEconData } from '../../lib/api-helpers'
 import { getMonthName } from '../../lib/date-helpers'
@@ -35,12 +38,14 @@ export const BarChart = ({ code, label, range }: BarChartProps) => {
       legend: {
         display: true,
         labels: {
-          boxWidth: 2,
+          boxWidth: 5,
+          boxHeight: 5,
         },
       },
       title: {
         display: true,
         text: `${code} - United States - ${label}`,
+        color: 'white',
       },
     },
   }
@@ -51,7 +56,7 @@ export const BarChart = ({ code, label, range }: BarChartProps) => {
       {
         label,
         data: labels?.map((_, idx) => chartData?.values[idx]),
-        borderColor: 'deepskyblue',
+        backgroundColor: 'deepskyblue',
       },
     ],
   }

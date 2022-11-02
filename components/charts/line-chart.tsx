@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import ChartJS from 'chart.js/auto'
+import { CategoryScale } from 'chart.js'
+
+ChartJS.register(CategoryScale)
 
 import { getNewEconData } from '../../lib/api-helpers'
 import { getMonthName } from '../../lib/date-helpers'
@@ -35,11 +38,13 @@ export const LineChart = ({ code, label, range, scale }: LineChartProps) => {
         labels: {
           boxWidth: 5,
           boxHeight: 5,
+          color: 'white'
         },
       },
       title: {
         display: true,
         text: `${code} - United States - ${label}`,
+        color: 'white'
       },
     },
   }

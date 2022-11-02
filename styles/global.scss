@@ -1,0 +1,34 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+  #__next {
+    height: 100%;
+    width: 100%;
+  }
+  color: white;
+  background-color: rgb(27, 27, 27);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
