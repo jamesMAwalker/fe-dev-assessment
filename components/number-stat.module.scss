@@ -1,0 +1,10 @@
+.numBlock {
+  display: flex;
+  flex-direction: column;
+  span {
+    padding: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: slateblue;
+  }
+}

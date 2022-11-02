@@ -1,0 +1,8 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#4d81f157",
+    "editor.snippetTabstopHighlightBackground": "#3a518357"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

@@ -1,0 +1,128 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 2.5vh 0;
+  grid-template-rows: 0.15fr 0.85fr;
+  overflow: scroll;
+}
+
+.toolbar {
+  width: calc(100% - 10rem);
+  margin: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media (max-width: 1024px) {
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 3rem 0;
+  }
+}
+
+.scaleContainer {
+  position: relative;
+  input {
+    padding: 0;
+  }
+  datalist {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    option {
+      color: lightgrey;
+      padding: 0;
+    }
+  }
+}
+
+.tool {
+  position: relative;
+  margin-left: 5rem;
+  display: flex;
+  align-items: center;
+  label {
+    margin-right: 1.5rem;
+  }
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
+}
+
+.datePicker {
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 1rem;
+  }
+  input[type="text"] {
+    margin-right: 1rem;
+    border: 1px solid slategray;
+    &:hover {
+      border-color: slateblue;
+    }
+  }
+  svg {
+    height: 3vh;
+  }
+  path {
+    fill: slategray;
+  }
+  ::-webkit-calendar-picker-indicator {
+    visibility: hidden;
+  }
+}
+
+.chartsContainer {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charts {
+  align-self: flex-start;
+  justify-self: center;
+  height: auto;
+  width: 65%;
+  width: min(65%, 1224px);
+  display: grid;
+  gap: 5rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1024px) {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart {
+  background-color: rgba(112, 128, 144, 0.05);
+  padding: 1rem;
+  border-radius: 4px;
+  canvas {
+    width: 100%;
+  }
+  &.wBorder {
+    padding: 1rem 2rem;
+    border: 1px solid slateblue;
+  }
+}
